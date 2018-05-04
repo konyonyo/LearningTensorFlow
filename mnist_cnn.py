@@ -72,6 +72,6 @@ with tf.Session() as sess:
     sess.run(train_step, feed_dict={x:train_images, y:train_labels})
 
     if step % 100 == 0:
-      acc_val = sess.run(accuracy, feed_dict={x:test_images, y:train_labels})
+      acc_val = sess.run(accuracy, feed_dict={x:test_images, y:test_labels})
       print("Step {0:d}: accuracy = {1:.2f}".format(step, acc_val))
 
